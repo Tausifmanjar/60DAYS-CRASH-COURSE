@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(57, 55, 55);
+            color: rgb(87, 200, 245);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .box1{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(92, 90, 90);
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+       .card{
+        width: 95%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+       background-color: white;
+        border-radius: 10px;
+        gap: 400px;
+       }
+       img{
+        width: 200px;
+        height: 150px;
+       }
+       .text{
+        margin-top: 20px;
+       }
+       .home{
+        color: rgb(16, 212, 16);
+       }
+       .content{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       }
+       .pink{
+        color: rgb(228, 47, 108);
+       }
+       .yellow{
+        color: rgb(231, 231, 51);
+       }
+       .violet{
+        color: rgb(238, 22, 238);
+       }
+       .skyblue{
+        color: rgb(66, 194, 244);
+       }
+
+       @media all and (max-width : 790px) and (min-width : 0px){
+               .card{
+                /* display: flex; */
+                flex-direction: column;
+                gap: 20px;
+                height: fit-content;
+               }
+               .text{
+                padding-bottom: 20px;
+               }
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>My Portfolio</h1>
+    </div>
+    <div class="box1">
+        <p>Home</p>
+        <p>Education</p>
+        <p>Projects</p>
+        <p>Skills</p>
+        <p>Contact Me</p>
+    </div>
+    <div class="content">
+        <div class="card">
+            <img src="https://png.pngtree.com/element_our/png/20181214/real-estate-house-logo-design-template-vector-illustration-png_269520.jpg" alt="">
+            <div>
+                <h2 class="home">Home</h2>
+                <p class="text">This is a dummy description for the Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1171617683/vector/education-symbol-design-template-pencil-and-book-icon-stylized.jpg?s=612x612&w=0&k=20&c=DrQKLkTfyQ512yTZlhvhrwFVVEPTcq3BHKN68anvGb4=" alt="">
+            <div>
+                <h2 class="pink">Education</h2>
+                <p class="text">This is a dummy description for the Education section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Wge9VqZy_MyY7h-66Mx9sDPhJ9ewnoN4Sw&usqp=CAU" alt="">
+            <div>
+                <h2 class="yellow">Projects</h2>
+                <p class="text">This is a dummy description for the Projects section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://dcassetcdn.com/design_img/2999389/71086/71086_16640284_2999389_9b698aa5_image.jpg" alt="">
+            <div>
+                <h2 class="violet">Skills</h2>
+                <p class="text">This is a dummy description for the Skills section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2PmwXg2uFFJll99mtnm75mfNBeXj3GAWcow&usqp=CAU" alt="">
+            <div>
+                <h2 class="skyblue">Contact Me</h2>
+                <p class="text">This is a dummy description for the Contact Me section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
