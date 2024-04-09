@@ -29,15 +29,15 @@
             width: 100px;
             height: 30px;
         }
-        .display{
+        #display{
              width: auto;
-            height: 100px;
+            height: 50px;
         }
     </style>
 </head>
 
 <body>
-    <h2 class="display"></h2>
+    <h2 id="display"></h2>
     <input type="number" placeholder="Enter 1st Number" id="first">
     <input type="number" placeholder="Enter 2st Number" id="second">
     <div class="btn">
@@ -48,16 +48,31 @@
     </div>
 </body>
 <script>
-  let display  = document.getElementById("display")
+    let display  = document.getElementById("display")
+
    
- let first = document.getElementById("first").value
- let second = document.getElementById("second").value
+ let first = document.getElementById("first")
+ let second = document.getElementById("second")
 
  function add(){
-    // first+second
-    display.innerText= first+second
-
+  let result = +first.value + +second.value
+    display.innerText=result
  }
+ function sub(){
+  let result = +first.value - +second.value
+    display.innerText=result
+ }
+
+ function multi(){
+  let result = +first.value * +second.value
+    display.innerText=result
+ }
+
+ function div(){
+  let result = +first.value / +second.value
+    display.innerText=result
+ }
+
 
 </script>
 
