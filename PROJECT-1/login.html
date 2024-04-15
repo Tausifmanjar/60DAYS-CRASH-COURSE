@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .content-sec {
+            display: flex;
+        }
+
+        .content-sec>img {
+            width: 40%;
+            height: 735px;
+        }
+
+        h1 {
+            color: gray;
+        }
+
+        .login-sec {
+            width: 100%;
+            height: 700px;
+            background-color: gainsboro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .login-sec>p {
+            width: 90%;
+            text-align: center;
+            color: gray;
+            margin: 30px 0px 50px 0px;
+        }
+
+        input {
+            width: 350px;
+            height: 50px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: large;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            color: whitesmoke;
+            background-color: black;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: medium;
+            margin-bottom: 50px;
+        }
+
+        hr {
+            width: 90%;
+        }
+
+        .check-box {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .check-box>input {
+            width: 15px;
+            height: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        .help-sec {
+            width: 90%;
+            display: flex;
+            gap: 5px;
+            justify-content: end;
+        }
+        .twin-sec{
+            width: 60%;
+        }
+        .copyright{
+            width: 100%;
+            height: 35px;
+            background-color: black;
+            color: gray;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-size: small;
+        }
+       .arrow{
+        width: 100%;
+        color: black;
+        margin-left: 40px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="content-sec">
+        <img src="https://media.sugarcosmetics.com/upload/authSIe2.jpg" alt="">
+        <div class="twin-sec">
+            <div class="login-sec">
+                <a href="./lipisticsite.html" class="arrow"><h2><i class="fa-solid fa-arrow-left"></i></h2></a>
+                <h1>HI!</h1>
+                <h3>Login/Sign Up Using Phone</h3>
+                <input type="number" placeholder="Enter Mobile Number">
+                <p>Registering for this site allows you to access your order status and history. Just fill in the above
+                    fields, and we'll get a new account set up for you in no time. We will only ask you for information
+                    necessary to make the purchase process faster and easier.
+                </p>
+                <button>SEND ME OTP</button>
+                <hr>
+                <div class="check-box">
+                    <input type="checkbox">
+                    <p>Get important updates on Whatsapp</p>
+                    <a href="">
+                        <p>Terms and Conditions</p>
+                    </a>
+                </div>
+                <div class="help-sec">
+                    <p>Need Help?</p>
+                    <a href="">
+                        <p>Contact Us</p>
+                    </a>
+                </div>
+                <hr>
+                <div class="check-box">
+                    <p>By Signing up or logging in, you agree to our</p>
+                    <a href="">
+                        <p>Terms and Conditions</p>
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <div></div>
+                <p>Copyright © 2024 SUGAR Cosmetics. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
