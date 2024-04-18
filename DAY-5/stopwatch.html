@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       #hr,#min,#sec{
+        font-weight: bold;
+        font-size: 40px;
+        color: darkcyan;
+       }
+       .display{
+        margin-bottom: 20px;
+       }
+    </style>
+</head>
+
+<body>
+    <h1>MASAI STOPWATCH</h1>
+    <div class="display">
+        <span id="hr">00</span>
+        <span>Hr</span>
+        <span id="min">00</span>
+        <span>Min</span>
+        <span id="sec">00</span>
+        <span>Sec</span>
+    </div>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <button onclick="reset()">RESET</button>
+</body>
+<script>
+var hr = 0;
+var min = 0;
+var sec = 0;
+var watch = false;
+
+
+  function start(){
+      watch = true;
+      stopwatch()
+  }
+
+  function stop(){
+    watch = false;
+  }
+
+  function reset(){
+    watch = false;
+
+    hr = 0;
+    min = 0;
+    sec = 0;
+
+    document.getElementById("hr").innerHTML="00"
+    document.getElementById("min").innerHTML="00"
+    document.getElementById("sec").innerHTML="00"
+  }
+
+
+  function stopwatch(){
+    if(watch == true){
+        sec+=1
+
+    if(sec == 60){
+        min+=1
+        sec = 0;
+    }
+    if(min == 60){
+        hr+=1
+        min=0;
+        sec = 0;
+    
+    }
+
+    document.getElementById("hr").innerHTML=hr;
+    document.getElementById("min").innerHTML=min;
+    document.getElementById("sec").innerHTML=sec;
+
+    setTimeout("stopwatch()",1000)
+  }
+}
+</script>
+
+</html>
