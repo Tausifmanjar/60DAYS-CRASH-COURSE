@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        #card{
+             width: 600px;
+             height: fit-content;
+             background-color: wheat;
+             border-radius: 5px;
+             margin: 20px auto 0px auto;
+             padding: 20px 0px 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fetchtodo()">FETCH TODO</button>
+    <div id="content"></div>
+</body>
+<script>
+    function fetchtodo(){
+        fetch("https://jsonplaceholder.typicode.com/todos")
+        .then((res) =>{
+            return res.json()
+        })
+        .then((res) =>{
+            // console.log(res)
+            res.map((value) =>{
+                let card = document.createElement("div")
+                 card.id="card"
+                let id = document.createElement("p")
+                 id.innerHTML=`Id : ${value.id}`
+                 let status = document.createElement("p")
+                 status.innerHTML=`Status : ${value.completed}`
+
+                 let title = document.createElement("h2")
+                 title.innerHTML=`Title : ${value.title}`
+
+
+             let content = document.getElementById("content")
+               card.append(id,status,title)
+               content.append(card)
+            })
+
+        })
+        .catch((err) => console.log(err))
+    }
+    
+</script>
+</html>
