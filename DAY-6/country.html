@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        #card{
+            background-color: gainsboro;
+            border-radius: 5px; 
+        }
+        #content{
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+            grid-template-rows: repeat(auto , 200px);
+            justify-content: center;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+<script>
+    function countryData(){
+        fetch("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries")
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+             console.log(data)
+             data.data.forEach(value => {
+                let div = document.createElement("div")
+                div.id="card"
+                let id = document.createElement("p")
+                 id.innerHTML=`Id : ${value.id}`
+                 let status = document.createElement("p")
+                 status.innerHTML=`Rank : ${value.Rank}`
+
+                 let title = document.createElement("h3")
+                 title.innerHTML=`Country : ${value.country}`
+                 let population = document.createElement("h3")
+                 population.innerHTML=`Population : ${value.population}`
+
+
+             let content = document.getElementById("content")
+               div.append(id,status,title,population)
+               content.append(div)
+             });
+        })
+        .catch(console.error())
+
+    }
+    countryData()
+</script>
+</html>
