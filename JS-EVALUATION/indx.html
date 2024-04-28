@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        table{
+           margin: auto;
+        }
+        th{
+            width: 200px;
+            height: 25px;
+            border: 1px solid black;
+            background-color: gray;
+            color: whitesmoke;
+        }
+        #table-body{
+            margin-top: 20px;
+        }
+        #card>td{
+            /* border: 1px solid black; */
+            background-color: gainsboro;
+            padding: 10px;
+
+        }
+        .filters{
+            margin-bottom: 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <div class="filters">
+          <label for="department">Filter by Department:</label>
+          <select id="department">
+            <option value="engineering">Engineering</option>
+            <option value="finance">Finance</option>
+            <option value="operations">Operations</option>
+            <option value="marketing">Marketing</option>
+            <option value="hr">Hr</option>
+
+          </select>
+          <label for="gender">Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="sort">Sort by Salary:</label>
+          <select id="sort">
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+          </select>
+
+        </div>
+    <table>
+        <thead>
+          <tr id="tr">
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+      
+</body>
+<script>
+     function getData(){
+        fetch('https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    let tableData = data.data.map(employee => {
+
+      return {
+        id: employee.id,
+        name: employee.name,
+        gender: employee.gender,
+        department: employee.department,
+        salary:employee.salary
+      };
+    });
+
+    let tableBody = document.getElementById('table-body');
+
+    tableData.forEach(employee => {
+        let row = document.createElement('tr');
+      row.id="card"
+      row.innerHTML = `
+        <td>${employee.id}</td>
+        <td>${employee.name}</td>
+        <td>${employee.gender}</td>
+        <td>${employee.department}</td>
+        <td>${employee.salary}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  })
+        .catch((err) => {
+            console.log("Error in Fetchig Data " + err)
+        })
+     }
+     getData()
+</script>
+</html>
