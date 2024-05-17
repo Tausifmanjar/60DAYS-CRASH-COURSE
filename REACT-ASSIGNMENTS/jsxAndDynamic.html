@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script type="text/babel">
+      // Your JSX code here
+    let element  = <p>Seize the day</p>;
+
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+);
+    </script> -->
+
+
+
+
+    <!-- <script type="text/babel">
+        let message = "Seize the day";
+        let element = <p>{message}</p>;
+    
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+    </script>
+     -->
+
+     <script type="text/babel">
+        let message1 = "Seize the day";
+        let message2 = "Carpe Diem";
+        let showFirstMessage = false; // Change this value to test conditional rendering
+    
+        let element = (
+            <div>
+                {showFirstMessage ? <p>{message1}</p> : <p>{message2}</p>}
+            </div>
+        );
+    
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+    </script>
+    
+  </body>
+</html>
