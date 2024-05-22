@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Define the Gallery component
+    function Gallery({ children }) {
+      return <div className="gallery">{children}</div>;
+    }
+
+    // Define the Image component
+    function Image({ src, alt }) {
+      return <img src={src} alt={alt} />;
+    }
+
+    // Render the Gallery component with Image components as children
+    ReactDOM.render(
+      <Gallery>
+        <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0s41nYCP4j8oOYrsqt5iwZNJ3nnMJPcynw&usqp=CAU" alt="Image 1" />
+        <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0s41nYCP4j8oOYrsqt5iwZNJ3nnMJPcynw&usqp=CAU" alt="Image 2" />
+        <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0s41nYCP4j8oOYrsqt5iwZNJ3nnMJPcynw&usqp=CAU" alt="Image 3" />
+        <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0s41nYCP4j8oOYrsqt5iwZNJ3nnMJPcynw&usqp=CAU" alt="Image 4" />
+      </Gallery>,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
