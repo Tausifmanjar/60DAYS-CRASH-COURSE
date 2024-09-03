@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: auto;
+            height: 700px ;
+            background-color: green;
+        }
+        @media all and (min-width : 900px)  and (max-width : 1200px){
+            div{
+                background-color: red;
+            }
+        }
+        @media all and (min-width : 500px)  and (max-width : 900px){
+            div{
+                background-color: yellow;
+            }
+        }
+        @media all and (min-width : 200px)  and (max-width : 500px){
+            div{
+                background-color: gray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
 
-        #content{
+        #content {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-        #header{
+
+        #header {
             margin-bottom: 50px;
         }
-        #card{
+
+        #card {
             display: flex;
             flex-direction: column;
         }
-        #image{
+
+        #image {
             width: 300px;
             height: 300px;
             border-radius: 5px 5px 0 0;
         }
-        #card{
+
+        #card {
             width: 300px;
             height: 450px;
             text-align: center;
             background-color: whitesmoke;
             border-radius: 5px;
         }
-        #logo{
+
+        #logo {
             width: 200px;
             height: 50px;
             margin: auto;
         }
-        .ele{
+
+        .ele {
             height: 0px;
         }
     </style>
 </head>
+
 <body>
     <div id="header"></div>
     <div id="content"></div>
@@ -52,113 +60,114 @@
     let header = document.getElementById("header")
 
     let head = document.createElement("h1")
-       head.innerText="Strategic Investors"
-       header.append(head)
+    head.innerText = "Strategic Investors"
+    header.append(head)
 
 
 
-        var content = document.getElementById("content")
+    var content = document.getElementById("content")
 
-        var contentsec = document.createElement("div")
-        contentsec.id="card"
-        var img = document.createElement("img")
-          img.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg"  
-          img.id="image" 
-         
-          var h2 = document.createElement("h2")
-          h2.innerText="vijay Shekhar Sharma"
-          h2.className="ele"
+    var contentsec = document.createElement("div")
+    contentsec.id = "card"
+    var img = document.createElement("img")
+    img.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg"
+    img.id = "image"
 
-          var position = document.createElement("p")
-          position.innerText="Founder & CEO"
-          position.className="ele"
+    var h2 = document.createElement("h2")
+    h2.innerText = "vijay Shekhar Sharma"
+    h2.className = "ele"
 
-        var logo = document.createElement("img")
-        logo.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
-        logo.id="logo"
+    var position = document.createElement("p")
+    position.innerText = "Founder & CEO"
+    position.className = "ele"
 
-   
-
-        contentsec.append(img,h2,position,logo)
-        content.append(contentsec)
-
-
-        
-        var contentsec = document.createElement("div")
-        contentsec.id="card"
-        var img = document.createElement("img")
-          img.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png"  
-          img.id="image" 
-         
-          var h2 = document.createElement("h2")
-          h2.innerText="Kunal Shah"
-          h2.className="ele"
-
-          var position = document.createElement("p")
-          position.innerText="Founder"
-          position.className="ele"
-
-        var logo = document.createElement("img")
-        logo.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
-        logo.id="logo"
-
-   
-
-        contentsec.append(img,h2,position,logo)
-        content.append(contentsec)
+    var logo = document.createElement("img")
+    logo.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+    logo.id = "logo"
 
 
 
-        
-        var contentsec = document.createElement("div")
-        contentsec.id="card"
-        var img = document.createElement("img")
-          img.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg"  
-          img.id="image" 
-         
-          var h2 = document.createElement("h2")
-          h2.innerText="Amrish Rau"
-          h2.className="ele"
-
-          var position = document.createElement("p")
-          position.innerText="CEO"
-          position.className="ele"
-
-        var logo = document.createElement("img")
-        logo.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
-        logo.id="logo"
-
-   
-
-        contentsec.append(img,h2,position,logo)
-        content.append(contentsec)
+    contentsec.append(img, h2, position, logo)
+    content.append(contentsec)
 
 
-        
-        var contentsec = document.createElement("div")
-        contentsec.id="card"
-        var img = document.createElement("img")
-          img.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg"  
-          img.id="image" 
-         
-          var h2 = document.createElement("h2")
-          h2.innerText="Sampad Swain"
-          h2.className="ele"
 
-          var position = document.createElement("p")
-          position.innerText="CO-Founder & CEO"
-          position.className="ele"
+    var contentsec = document.createElement("div")
+    contentsec.id = "card"
+    var img = document.createElement("img")
+    img.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png"
+    img.id = "image"
 
-        var logo = document.createElement("img")
-        logo.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
-        logo.id="logo"
+    var h2 = document.createElement("h2")
+    h2.innerText = "Kunal Shah"
+    h2.className = "ele"
 
-   
+    var position = document.createElement("p")
+    position.innerText = "Founder"
+    position.className = "ele"
 
-        contentsec.append(img,h2,position,logo)
-        content.append(contentsec)
+    var logo = document.createElement("img")
+    logo.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+    logo.id = "logo"
 
-         
-        
+
+
+    contentsec.append(img, h2, position, logo)
+    content.append(contentsec)
+
+
+
+
+    var contentsec = document.createElement("div")
+    contentsec.id = "card"
+    var img = document.createElement("img")
+    img.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg"
+    img.id = "image"
+
+    var h2 = document.createElement("h2")
+    h2.innerText = "Amrish Rau"
+    h2.className = "ele"
+
+    var position = document.createElement("p")
+    position.innerText = "CEO"
+    position.className = "ele"
+
+    var logo = document.createElement("img")
+    logo.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+    logo.id = "logo"
+
+
+
+    contentsec.append(img, h2, position, logo)
+    content.append(contentsec)
+
+
+
+    var contentsec = document.createElement("div")
+    contentsec.id = "card"
+    var img = document.createElement("img")
+    img.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg"
+    img.id = "image"
+
+    var h2 = document.createElement("h2")
+    h2.innerText = "Sampad Swain"
+    h2.className = "ele"
+
+    var position = document.createElement("p")
+    position.innerText = "CO-Founder & CEO"
+    position.className = "ele"
+
+    var logo = document.createElement("img")
+    logo.src = "https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+    logo.id = "logo"
+
+
+
+    contentsec.append(img, h2, position, logo)
+    content.append(contentsec)
+
+
+
 </script>
+
 </html>
