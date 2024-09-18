@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    //TEMPELETE LITERALS
+    //QUE 1
+    function greet(name,age){
+        return `Hello, my name is ${name}, and I am ${age} years old.`
+    }
+    console.log(greet("Jhon",25));
+
+//QUE 2
+    function generateParagraph(name,age){
+        return `Hello,
+         my name is ${name},
+          and I am ${age} years old.`
+    }
+    console.log(generateParagraph("Jhon",25));
+
+//QUE 3
+function calculateSum(a,b){
+ return `The sum of  ${a} and ${b} is  ${a+b}`
+}
+    console.log(calculateSum(5,3));
+    
+    //Arrow Functions
+   let  add = (a,b) => {
+  return a + b;
+    }
+
+
+
+    let double = (n) => n*n
+  
+
+    // OBJECT SHORTHAND
+    // let name = "tauif";
+    // let age = 20;
+
+    // function createPerson(name, age){
+    //     let obj = {
+    //         name : name,
+    //         age : age
+    //     };
+    //     return obj;
+    // }
+    // console.log(createPerson(name, age))
+
+
+
+    let name = "john";
+    let age = 25;
+
+    function introduce(name, age){
+        let obj = {
+            name : name,
+            age : age
+        };
+        return `Hi, I am ${name} and I am ${age} years old.`
+    }
+    console.log(introduce(name, age))
+
+ //DEFAULT PARAMETERS IN FUNCTION
+ function greet(name = "Guest") {
+    return `Hello, ${name}`
+ }
+ console.log(greet());
+ 
+
+
+
+  </script>
+</html>
