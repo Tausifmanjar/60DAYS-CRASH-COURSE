@@ -56,7 +56,7 @@ let strings = [
     }, 0)
  }
 
- console.log(IdentifyNum(numbers));
+//  console.log(IdentifyNum(numbers));
  
   
 
@@ -93,17 +93,24 @@ let strings = [
  console.log(swappedStrings); 
 
 
- const numbers = [1, 2, 3, 4, 5, 7];
 
-// Step 1: Filter odd numbers
-const oddNumbers = numbers.filter(num => num % 2 !== 0);
 
-// Step 2: Square each odd number
-const squaredOdds = oddNumbers.map(num => num * num);
 
-// Step 3: Sum the squared values
-const sumOfSquares = squaredOdds.reduce((acc, curr) => acc + curr, 0);
 
-console.log(sumOfSquares); // Output the result
 
+ //SUM OF SQUARE OF ALL ODD NUMBERS
  
+
+   let array = [1, 2, 3, 4, 5, 7];
+
+
+   function allNum(arrNum){
+        let oddNum = arrNum.filter(num => num%2==1)
+        let square = oddNum.map(num=> num*num)
+        let sum = square.reduce((acc , cur) => {
+           return acc + cur     
+        },0)
+        return oddNum , square , sum 
+   }
+   console.log(allNum(array));
+   
