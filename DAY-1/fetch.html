@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+  
+        <button onclick="getCategoriesData()" id="get-category-data">Get Category Data</button>
+        <button onclick="getIngredientData()"  id="get-ingredient-data">Get Ingredient Data</button>
+    </div>
+</body>
+<script>
+  function  getCategoriesData(){
+    let url = " https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+    console.error('Error:', error);
+  });
+  }
+
+
+  function  getIngredientData(){
+    let url = "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast"
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+    console.error('Error:', error);
+  });
+  }
+
+</script>
+</html>
