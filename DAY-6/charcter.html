@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="inp" type="text" name="" id="">
+    <button id="btn">Go</button>
+    <h1 id="show"></h1>
+</body>
+<script>
+
+    let inp = document.getElementById("inp")
+    inp.value
+
+    let btn = document.getElementById("btn")
+
+    let show = document.getElementById("show")
+    function calculateLength() {
+
+
+        for (let i = 1; i <= inp.value.length; i++) {
+          show.textContent = i
+
+        }
+    }
+
+    btn.addEventListener('click', calculateLength);
+
+</script>
+
+</html>
