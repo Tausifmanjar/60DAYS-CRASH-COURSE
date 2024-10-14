@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main {
+            width: 900px;
+            margin:  auto ;
+        }
+
+        img {
+            width: 900px;
+
+        }
+
+        .box {
+            display: flex;
+            gap: 250px;
+        }
+        .grey{
+            color: gray;
+        }
+        h2{
+            color: goldenrod;
+        }
+        p{
+            font-weight: bold;
+        }
+        button{
+            width: 900px;
+            height: 40px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: large;
+            background-color: black;
+            color: white;
+        }
+        .footer{
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Your JSX code here
+        function WatchUi() {
+            return (
+                <React.Fragment>
+                    <div className="main">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfL36Et0ONOsuFdMwDAaNlGUy9NJmSV8bz_w&s" alt="" />
+                        <h1>Automatic Watch</h1>
+                        <h3>$350.00 USD</h3>
+                        <br />
+                        <p className="grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit rerum quam molestiae deleniti, quis dolorum.</p>
+
+                        <p>Lorem ipsum dolor  adipisicing elit. Iusto explicabo quos provident quis beatae illo repellendus itaque, nobis labore nulla atque sit deleniti perferendis? Architecto minus expedita consectetur illo, earum non eaque nam molestias ab.</p>
+
+                        <hr />
+
+                        <h2>FEATURES</h2>
+                        <div className="box">
+                            <div>
+                                <p>Chronograph</p>
+                                <p>Master Chronometer Certified</p>
+                                <p>Tachymeter</p>
+                            </div>
+                            <div>
+                                <p>Anti-magnetic</p>
+                                <p>Chronometer</p>
+                                <p>Small seconds</p>
+                            </div>
+                        </div>
+                        <hr />
+
+                        <h2>PRODUCTS DETAILS</h2>
+                        <br />
+                        <p>Between lugs : 20 mm </p>
+                        <p>Bracelet : leather strap</p>
+                        <p>Case : Steel </p>
+                        <p>Case diameter : 42 mm</p>
+                        <p>Dial color : Black</p>
+                        <p>Water resistant : 5 bar (50 meters/167 feet)</p>
+
+                        <div className="footer">
+                            <button>ADD TO CART</button>
+                            <p>2-3 days bussiness days delivery</p>
+                        </div>
+                    </div>
+                </React.Fragment>
+            )
+        }
+
+        let root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<WatchUi />)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
