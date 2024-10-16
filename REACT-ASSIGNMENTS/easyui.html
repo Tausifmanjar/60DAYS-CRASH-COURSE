@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components in React</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        a {
+            color: rgb(142, 220, 142);
+        }
+
+        .cards {
+            width: 300px;
+            height: auto;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            width: 50px;
+            height: 30px;
+            background-color: rgb(142, 220, 142);
+            color: green;
+            border-radius: 5px;
+            padding: 5px;
+            margin: auto;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        h1 {
+            margin-top: 150px;
+            margin-bottom: 80px;
+        }
+        p{
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Write your code here
+        function Aap() {
+            return (
+                <div>
+                    <h1>Getting started in <a href="#">3 easy steps</a></h1>
+                    <div className="content">
+                        <Card id="01" title="Find your template" paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sapiente, quo, ea beatae asperiores velit nesciunt numquam laudantium delectus sunt, quis molestias veritatis. Veritatis, eos!" />
+                        <Card id="02" title="Copy the code" paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sapiente, quo, ea beatae asperiores velit nesciunt numquam laudantium delectus sunt, quis molestias veritatis. Veritatis, eos!" />
+                        <Card id="03" title="Enjoy your free time" paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sapiente, quo, ea beatae asperiores velit nesciunt numquam laudantium delectus sunt, quis molestias veritatis. Veritatis, eos!" />
+                    </div>
+
+                </div>
+
+            )
+        }
+        function Card({ id, title, paragraph }) {
+            return (
+                <div className="cards">
+                    <h2>{id}</h2>
+                    <h3>{title}</h3>
+                    <p>{paragraph}</p>
+                </div>
+            )
+        }
+
+        let root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Aap />)
+    </script>
+</body>
+
+</html>
