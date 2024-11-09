@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+  }
+  .card{
+    width: 500px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+  margin-top: 20px;
+  }
+  
+  
