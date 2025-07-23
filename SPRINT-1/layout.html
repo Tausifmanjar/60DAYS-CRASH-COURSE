@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .header{
+         height: 100px;
+         background-color: rgb(6, 146, 201);
+
+        }
+        .tags{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+   h2{
+    padding-top: 30px;
+    margin-bottom: 20px;
+   }
+   .highlight{
+    background-color: rgb(45, 45, 212);
+   }
+   .footer{
+    height: 30px;
+    background-color:  rgb(6, 146, 201);
+    margin-top: 20px;
+   }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h2>My Portfolio</h2>
+            <div class="tags">
+                <P>Home</P>
+                <p>About</p>
+                <p>Projects</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <h2>Welcome to My Portfolio</h2>
+        <p>This Portfolio showcase my projects and provides information about my background and contact details.</p>
+        <h2>About</h2>
+        <p>Hello I'm a web developer passionate about building dynamic and responsive websites. I enjoy creating user
+            friendly in terfaces and woerking on challenging projects.</p>
+        <h2>Projects</h2>
+        <table border="1">
+            <thead>
+                <tr class="highlight">
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project Alpha</td>
+                    <td>A web-based tool for tracking project progress and managing tasks.</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Project Site</td>
+                    <td>A Personal website showcasing my work and skills as a web developer.</td>
+                    <td>2024</td>
+            </tbody>
+        </table>
+
+        <h2>Contact</h2>
+        <form action="/submit">
+            <label for="name">Name:</label>
+            <br>
+            <input type="text">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <br>
+            <input type="text">
+            <br><br>
+            <label for="message">Message:</label>
+            <br>
+            <textarea name="mess" id="mess"></textarea>
+            <br>
+            <br>
+            <button type="/submit">Submit</button>
+        </form>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
