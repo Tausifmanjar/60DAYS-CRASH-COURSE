@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 5px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+            grid-template-rows: repeat(auto, 300px);
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .box {
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+             @media all and (max-width : 1150px) and (min-width : 800px){
+            .content{
+                grid-template-columns: repeat(3, 300px);
+                gap: 20px;
+            }
+        }
+             @media all and (max-width : 799px) and (min-width : 600px){
+            .content{
+                grid-template-columns: repeat(2, 300px);
+                gap: 20px;
+            }
+        }
+             @media all and (max-width : 599px) and (min-width : 0px){
+            .content{
+                grid-template-columns: repeat(1, 300px);
+                gap: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+        <div class="box">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="">
+            <h3>Kunal Shah</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ex.</p>
+        </div>
+    </div>
+</body>
+
+</html>
